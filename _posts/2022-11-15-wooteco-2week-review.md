@@ -1,7 +1,8 @@
 ```layout: single
+layout: single
 title: "[우테코-프리코스] 2주 차 회고"
-categories: [wooteco]
 tag: [wooteco]
+categories: [wooteco]
 toc: true
 author_profile: false
 sidebar:
