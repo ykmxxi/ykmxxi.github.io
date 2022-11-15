@@ -1,9 +1,9 @@
 ---
-layout: single
 title: "[우테코-프리코스] 2주 차 회고"
 tag: [wooteco]
 categories: [wooteco]
 toc: true
+toc_sticky: true
 author_profile: false
 sidebar:
     nav: "docs"
