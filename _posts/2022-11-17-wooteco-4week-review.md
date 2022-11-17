@@ -168,6 +168,63 @@ public class Application {
 - 생성자의 인자로 객체를 받았을 때 외부에서 넘겨졌던 객체를 변경해도 내부 객체는 변하지 않아야 한다. 따라서 **방어적 복사**를 해야 한다.
 - `getter` 를 통해 객체를 넘겨줄 때 내부 객체는 변하지 않아야 한다. **방어적 복사**를 이용해도 좋고 객체 값을 읽기 전용으로 넘겨주는 **Unmodifiable Collection** 도 좋다.
 
+# 2. 테스트 하기 어려운 코드를 테스트 하기
+
+### 📌 메서드 시그니처를 수정해 테스트하기 좋은 메서드로 만들자
+
+3주 차 미션의 `Lotto` 클래스 이다.
+
+```java
+import camp.nextstep.edu.missionutils.Randoms;
+
+public class Lotto {
+    private List<Integer> numbers;
+
+    public Lotto() {
+        this.numbers = Randoms.pickUniqueNumbersInRange(1, 45, 6);
+    }
+}
+——————
+
+public class LottoMachine {
+    public void execute() {
+        Lotto lotto = new Lotto();
+    }
+}
+```
+
+생성자에서 `numbers` 에 `Randoms.pickUniqueNumbersInRange(1, 45, 6)` 을 이용해 값을 생성해 주고 있다. 이러한 경우 매번 `Lotto` 객체를 생성할 때 값이 달라지므로 원하는 값이 들어가는지 테스트를 작성하기가 어려울 것이다.
+
+올바른 로또 번호가 생성되는 것을 테스트하기 어려우면, 테스트하기 어려운 것을 클래스 내부가 아닌 외부로 분리하는 시도를 해 본다.
+
+굳이 `Lotto` 에서 값을 생성할 필요가 없다. 로또를 자동 생성해 주는 `LottoMachine` 클래스를 만들고 자동 생성할 역할(책임)을 부여한다. 이러면 `Lotto` 가 올바른 값을 가지는지 테스트를 할 수 있다.
+
+```java
+public class Lotto {
+    private List<Integer> numbers;
+
+    public Lotto(List<Integer> numbers) {
+        this.numbers = numbers;
+    }
+}
+——————
+import camp.nextstep.edu.missionutils.Randoms;
+
+public class LottoMachine {
+    public void execute() {
+        List<Integer> numbers = Randoms.pickUniqueNumbersInRange(1, 45, 6);
+
+        Lotto lotto = new Lotto(numbers);
+    }
+}
+```
+
+이렇게 되면 `Lotto` 클래스의 테스트를 작성하기가 쉬워진다. 또한 `Lotto`객체를  통해 `LottoMachine` 에서 올바른 값을 생성했는지 확인이 가능하므로 `LottoMachine` 테스트 작성도 가능해 진다.
+
+메서드의 시그니처를 수정하는 것만으로 테스트하기 좋은 메서드로 만들 수 있다는 것을 알 수 있다. 하지만 모든 문제가 해결된 것은 아니다. 단지 랜덤값 생성을 외부로 분리한 것이지 실제로 `execute()` 를 호출하면 랜덤값을 주입해 주어야 하기 때문에, `LottoMachine` 은 랜덤값에 의존하게 된다.
+
+이러한 의존을 어디에 두고, 어떻게 관리해야 할지 고민을 해야한다. 의존을 조금 더 줄일 수 있는 방법 중 인터페이스를 분리하는 방법이 있다.
+
 
 
 > 참고 URL
@@ -177,3 +234,5 @@ public class Application {
 > > [디미터 법칙](https://johngrib.github.io/wiki/law-of-demeter/)
 > >
 > > [방어적 복사와 Unmodifiable Collection](https://tecoble.techcourse.co.kr/post/2021-04-26-defensive-copy-vs-unmodifiable/)
+> >
+> > [메서드 시그니처를 수정하여 테스트하기 좋은 메서드로 만들기](https://tecoble.techcourse.co.kr/post/2020-05-07-appropriate_method_for_test_by_parameter/)
