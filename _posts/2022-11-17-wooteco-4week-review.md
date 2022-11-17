@@ -239,11 +239,8 @@ public class LottoMachine {
 
   - 반드시 `try catch`로 감싸주던가, 해당 메소드에 `throw Exception`을 달아서 예외를 다시 호출자에게 미루는 방법을 사용해야 한다.
 
-- **Unchecked Exception**
-
-   : 예외 처리가 필수적이지 않은 경우로 `RuntimeException`을 상속받는다.
-
-  - `try cath` 또는 `throw Exception`을 강제하지 않는다.
+- **Unchecked Exception** : 예외 처리가 필수적이지 않은 경우로 `RuntimeException`을 상속받는다.
+- `try cath` 또는 `throw Exception`을 강제하지 않는다.
 
 ### 📌 IllegalArgumentException
 
