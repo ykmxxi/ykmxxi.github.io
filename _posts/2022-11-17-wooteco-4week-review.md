@@ -225,7 +225,44 @@ public class LottoMachine {
 
 이러한 의존을 어디에 두고, 어떻게 관리해야 할지 고민을 해야한다. 의존을 조금 더 줄일 수 있는 방법 중 인터페이스를 분리하는 방법이 있다.
 
+# 3. IllegalArgumentException vs. IllegalStateException
 
+### 📌 RuntimeException
+
+실행 중에 발생하며 시스템 환경적으로나 입력 값이 잘못된 경우, 혹은 의도적으로 프로그래머가 잡아내기 위한 조건등에 부합할 때 발생(`throw`) 되게 만든다.
+
+그렇다면 `unchecked exception` 은 무엇일까?
+
+`Exception`은 `Checked Exception`과 `Unchecked Exception`으로 나눌수 있다.
+
+- **Checked Exception** : 예외 처리를 필수적으로 해야하는 경우로 `Exception`을 상속 받는다.
+
+  - 반드시 `try catch`로 감싸주던가, 해당 메소드에 `throw Exception`을 달아서 예외를 다시 호출자에게 미루는 방법을 사용해야 한다.
+
+- **Unchecked Exception**
+
+   : 예외 처리가 필수적이지 않은 경우로 `RuntimeException`을 상속받는다.
+
+  - `try cath` 또는 `throw Exception`을 강제하지 않는다.
+
+### 📌 IllegalArgumentException
+
+`RuntimeExcpetion` 을 상속받은 예외. `Unchecked Exception` 이고 처리를 해주지 않아도 컴파일에는 문제가 없다. **부정한 인수, 부적절한 인수를 메서드에 건네준 것을 나타내기 위해서 발생**된다. 즉, 매개변수가 의도하지 않은 상황을 유발시킬 때 또는 `null이 아닌 인자의 값`이 잘못되었을 때 사용한다.
+
+예시는 다음과 같다.
+
+- 양수값을 넣어줘야 하는데 음수값을 넣어준 경우
+- 3이상의 값을 넣어줘야 하는데 3 미만의 값을 입력한 경우
+
+### 📌 IllegalStateException
+
+`RuntimeExcpetion` 을 상속받은 예외. `Unchecked Exception` 이고 처리를 해주지 않아도 컴파일에는 문제가 없다. 부정 또는 부적절한 때에 메서드가 불려 간 것을 나타낸다. 즉, Java 환경 또는 Java Aplication은 요구된 operation에 적절한 상태가 아니다는 것을 알려준다. 즉, 메소드를 호출하기 위한 상태가 아닐 때 사용한다.
+
+예시는 다음과 같다.
+
+- 사용하려는 메소드의 파라미터값이 아직 생성되지 않은 경우
+
+<br>
 
 > 참고 URL
 >
@@ -236,3 +273,7 @@ public class LottoMachine {
 > > [방어적 복사와 Unmodifiable Collection](https://tecoble.techcourse.co.kr/post/2021-04-26-defensive-copy-vs-unmodifiable/)
 > >
 > > [메서드 시그니처를 수정하여 테스트하기 좋은 메서드로 만들기](https://tecoble.techcourse.co.kr/post/2020-05-07-appropriate_method_for_test_by_parameter/)
+> >
+> > [RuntimeException란 무엇인가?](https://nhj12311.tistory.com/204)
+> >
+> > [IllegalArgumentException vs IllegalStateException](https://velog.io/@injoon2019/IllegalArgumentException-vs-IllegalStateException)
