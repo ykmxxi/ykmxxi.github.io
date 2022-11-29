@@ -3,6 +3,7 @@ title: "[우테코-프리코스] 3주 차 회고"
 categories: [wooteco]
 tag: [wooteco]
 toc: true
+toc_sticky: true
 author_profile: false
 sidebar:
     nav: "docs"
