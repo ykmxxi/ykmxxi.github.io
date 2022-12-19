@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ykmxxi.github.io/sitemap.xml
