@@ -24,27 +24,29 @@ sidebar:
 # 📌 노드와 크기
 
 ```java
-public class LinkedList<E> implements ListI<E> {
-		class Node<E> { // inner class로 외부에서 직접적인 접근이 불가능
-				E data;
-				Node<E> next; // 다음 노드를 가리키기 때문에 타입이 Node
-				public Node(E obj) {
-						data = obj;
-						next = null;
-				}
-		}
+public class LinkedList<E> implements List<E> {
+    class Node<E> { // inner class로 외부에서 직접적인 접근이 불가능
+        E data;
+        Node<E> next; // 다음 노드를 가리키기 때문에 타입이 Node
+
+        public Node(E obj) {
+            data = obj;
+            next = null;
+        }
+    }
 
 		private Node<E> head;
-		private Node<E> tail;
-		private int currentSize; // 노드가 하나 생성될 때 마다 +1
+    private Node<E> tail;
+    private int currentSize; // 노드가 하나 생성될 때 마다 +1
 
-		public LinkedList() {
-				head = null;
-				tail = null;
-				currentSize = 0;
-		}
+    public LinkedList() {
+        head = null;
+        tail = null;
+        currentSize = 0;
+    }
 		...
 }
+
 ```
 
 `currentSize`를 선언한 이유는 연결 리스트의 크기를 빠르게 얻기 위해서이다. 노드의 개수를 직접 셀 경우, 요소가 n개이면 n번 세야한다. 따라서 하나씩 세는 것의 시간 복잡도는 $\theta(n)$이다. 하지만 변수를 선언하고 리스트에 노드가 추가될 때 마다 변수의 값을 늘려주면 리스트의 크기를 바로 알 수 있다. 이 때 시간 복잡도는 $O(1)$이다.
@@ -92,10 +94,10 @@ public class LinkedList<E> implements ListI<E> {
 
 ```java
 public void addFirst(E obj) {
-		Node<E> node = new Node<E>(obj);
-		node.next = head; // 새로운 노드가 기존의 첫 번째 노드를 가리킨다
-		head = node; // head는 새로운 노드를 가리킨다
-		tail = node; // tail은 새로운 노드를 가리킨다
+    Node<E> node = new Node<E>(obj);
+    node.next = head; // 새로운 노드가 기존의 첫 번째 노드를 가리킨다
+    head = node; // head는 새로운 노드를 가리킨다  
+    tail = node; // tail은 새로운 노드를 가리킨다
 }
 ```
 
@@ -111,13 +113,13 @@ public void addFirst(E obj) {
 
 ```java
 public void addList(E obj) {
-		Node<E> node = new Node<E>(obj);
-		Node<E> tmp = head;
+    Node<E> node = new Node<E>(obj);
+    Node<E> tmp = head;
 
-		while (tmp.next != null) {
-				tmp = tmp.next;
-		}
-		tmp.next = node;
+    while (tmp.next != null) {
+        tmp = tmp.next;
+    }
+    tmp.next = node;
 }
 ```
 
@@ -125,21 +127,21 @@ public void addList(E obj) {
 
 ```java
 public void addList(E obj) {
-		Node<E> node = new Node<E>(obj);
-		// 비어있는 연결 리스트인지 확인
-		if (head == null) {
-				head = node;
-				currentSize++;
-				return;
-		}
+    Node<E> node = new Node<E>(obj);
+    // 비어있는 연결 리스트인지 확인
+    if (head == null) {
+        head = node;
+        currentSize++;
+        return;
+    }
 
-		Node<E> tmp = head;
+    Node<E> tmp = head;
 
-		while (tmp.next != null) {
-				tmp = tmp.next;
-		}
-		tmp.next = node;
-		currentSize;
+    while (tmp.next != null) {
+        tmp = tmp.next;
+    }
+    tmp.next = node;
+    currentSize;
 }
 ```
 
@@ -147,18 +149,18 @@ public void addList(E obj) {
 
 ```java
 public void addList(E obj) {
-		Node<E> node = new Node<E>(obj);
-		// 비어있는 연결 리스트인지 확인
-		if (head == null) {
-				head = node;
-				tail = node;
-				currentSize++;
-				return;
-		}
+    Node<E> node = new Node<E>(obj);
+    // 비어있는 연결 리스트인지 확인
+    if (head == null) {
+        head = node;
+        tail = node;
+        currentSize++;
+        return;
+    }
 
-		tail.next = node;
-		tail = node;
-		currentSize++;
+    tail.next = node;
+    tail = node;
+    currentSize++;
 }
 ```
 
@@ -180,12 +182,12 @@ head = head.next;
 
 ```java
 public E removeFirst() {
-		if (head == null) {
-				return null;
-		}
+    if (head == null) {
+        return null;
+    }
 
-		// data 객체를 반환하기 위한 임시변수
-		E tmp = head.data;
+    // data 객체를 반환하기 위한 임시변수
+    E tmp = head.data;
 }
 ```
 
@@ -199,21 +201,21 @@ public E removeFirst() {
 
 ```java
 public E removeFirst() {
-		if (head == null) {
-				return null;
-		}
+    if (head == null) {
+        return null;
+    }
 
-		// data 객체를 반환하기 위한 임시변수
-		E tmp = head.data;
-		if (head == tail) { // 요소가 한 개인 경우
-				head = null;
-				tail = null;
-		} else { // 요소가 두개 이상인 경우
-				head = head.next;
-		}
-		currentSize--;
+    // data 객체를 반환하기 위한 임시변수
+    E tmp = head.data;
+    if (head == tail) { // 요소가 한 개인 경우
+        head = null;
+        tail = null;
+    } else { // 요소가 두개 이상인 경우
+        head = head.next;
+    }
+    currentSize--;
 
-		return tmp;
+    return tmp;
 }
 ```
 
@@ -242,28 +244,28 @@ public E removeFirst() {
 
 ```java
 public E removeLast() {
-		if (head == null) {
-				return null;
-		}
+    if (head == null) {
+        return null;
+    }
 
-		if (head == tail) {
-				// head = tail = null; 을 직접 작성해도 좋으나 미리 작성한 메서드를 활용
-				return removeFirst();
-		}
+    if (head == tail) {
+        // head = tail = null; 을 직접 작성해도 좋으나 미리 작성한 메서드를 활용
+        return removeFirst();
+    }
 
-		Node<E> current = head;
-		Node<E> previous = null;
+    Node<E> current = head;
+    Node<E> previous = null;
 
-		while (current != tail) {
-				previous = current;
-				current = current.next;
-		}
+    while (current != tail) {
+        previous = current;
+        current = current.next;
+    }
 
-		previous.next = null;
-		tail = previous;
-		currentSize--;
-		
-		return current.data;
+    previous.next = null;
+    tail = previous;
+    currentSize--;
+
+    return current.data;
 }
 ```
 
