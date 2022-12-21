@@ -35,7 +35,7 @@ public class LinkedList<E> implements List<E> {
         }
     }
 
-		private Node<E> head;
+    private Node<E> head;
     private Node<E> tail;
     private int currentSize; // 노드가 하나 생성될 때 마다 +1
 
