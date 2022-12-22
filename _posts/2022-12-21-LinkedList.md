@@ -1,5 +1,5 @@
 ---
-title: "[DataStructure]선형 자료구조: 연결 리스트(LinkedList) Part1"
+title: "[DataStructure]선형 자료구조: 연결 리스트(LinkedList)"
 categories: [DataStructure]
 tag: ["DataStructure"]
 toc: true
