@@ -1,5 +1,5 @@
 ---
-title: "[Algorithm]복잡성 (Complexity)"
+title: "[알고리즘] 복잡성 (Complexity)"
 categories: [Algorithm]
 tag: ["Algorithm"]
 toc: true
