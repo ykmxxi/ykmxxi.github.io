@@ -143,6 +143,6 @@ Java 애플리케이션을 실행시켰을 때
     - 압축할 때 : jar cvf Hello.jar Hello1.class Hello2.class
     - 압축 될 때 : jar xvf Hello.jar
 
-> JRE (Java Runtime Environment) : 자바로 작성된 응용프로그램이 실행되기 위한 최소환경
-> JDK = JRE + 개발에 필요한 실행파일(javac.exe, javap.exe 등)
-> JRE = JVM + Java API
+> - JRE (Java Runtime Environment) : 자바로 작성된 응용프로그램이 실행되기 위한 최소환경
+> - JDK = JRE + 개발에 필요한 실행파일(javac.exe, javap.exe 등)
+> - JRE = JVM + Java API
