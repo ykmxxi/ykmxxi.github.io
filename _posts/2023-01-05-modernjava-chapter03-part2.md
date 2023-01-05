@@ -198,7 +198,7 @@ inventory.sort(comparing(Apple::getWeight));
 
 # 3.8 람다 표현식을 조합할 수 있는 메서드
 
-자바 8의 몇몇 함수형 인터페이스는 람다 표현식을 조합할 수 있도록 다양한 **유틸리미 메서드**를 포함한다. 즉, 간단한 여러 개의 **람다 표현식을 조합해서 복잡한 람다 표현식**을 만들 수 있다는 것이다.
+자바 8의 몇몇 함수형 인터페이스는 람다 표현식을 조합할 수 있도록 다양한 **유틸리티 메서드**를 포함한다. 즉, 간단한 여러 개의 **람다 표현식을 조합해서 복잡한 람다 표현식**을 만들 수 있다는 것이다.
 
 예를 들어 두 Predicate를 조합해서 두 조건의 or 연산을 수행하는 Predicate를 만들 수 있다. 또 한 함수의 결과가 다른 함수의 입력이 되도록 두 함수를 조합할 수도 있다.
 
@@ -231,7 +231,7 @@ inventory.sort(comparing(Apple::getWeight)
 ```
 
 - `thenComparing()`: 두 번째 비교자를 만드는 메서드
-  - comparing 메서드처럼 함수를 인수로 받아 첫 번째 비교자를 이용해서 두 객체가 같다고 판단되면 두 번쨰 비교자에게 객체를 전달
+  - comparing 메서드처럼 함수를 인수로 받아 첫 번째 비교자를 이용해서 두 객체가 같다고 판단되면 두 번째 비교자에게 객체를 전달
 
 ## 3.8.2 Predicate 조합
 
@@ -251,7 +251,7 @@ Predicate<Apple> redAndHeavyApple = redApple.and(apple -> apple.getWeight() > 15
 ```
 
 - `or()`: `||`와 같이 두 Predicate를 연결 시키는 메서드
-  - (redApple || heavyApple) && greenApple
+  - `(redApple || heavyApple) && greenApple`
 
 ```java
 // 빨간색이면서 무거운 사과 또는 초록색 사과
