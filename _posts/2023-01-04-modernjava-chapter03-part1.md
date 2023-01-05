@@ -9,6 +9,10 @@ sidebar:
     nav: "docs"
 ---
 
+[[모던 자바 인 액션] 03. 람다 표현식 - part2](https://ykmxxi.github.io/modern%20java%20in%20action/modernjava-chapter03-part2/)
+
+<br>
+
 람다 표현식은 **이름이 없는 함수면서 메서드를 인수로 전달**할 수 있으므로 익명 클래스와 비슷하다. 람다 표현식은 더 깔끔한 코드로 동작을 구현하고 전달한다. 메서드 참조와 함께 사용되면 큰 위력을 발휘할 수 있다.
 
 <br>
