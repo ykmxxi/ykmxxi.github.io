@@ -2,11 +2,7 @@
 title: "[객체지향의 사실과 오해] 01 협력하는 객체들의 공동체"
 categories: [book]
 tag: ["객체지향"]
-toc: true
-toc_sticky: true
 author_profile: false
-sidebar:
-    nav: "docs"
 ---
 
 # 📌 객체지향이란?

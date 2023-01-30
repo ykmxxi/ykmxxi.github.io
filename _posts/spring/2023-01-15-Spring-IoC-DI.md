@@ -2,11 +2,7 @@
 title: "[Spring] IoC(Inversion of Control), DI(Dependency Injection)"
 categories: [Spring]
 tag: ["Spring", "SpringBoot"]
-toc: true
-toc_sticky: true
 author_profile: false
-sidebar:
-    nav: "docs"
 ---
 
 # 📌 IoC(Inversion of Control), DI

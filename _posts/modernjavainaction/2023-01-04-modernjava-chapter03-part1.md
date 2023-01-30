@@ -2,11 +2,7 @@
 title: "[모던 자바 인 액션] 03. 람다 표현식 - part1"
 categories: [Modern Java in Action]
 tag: ["Java"]
-toc: true
-toc_sticky: true
 author_profile: false
-sidebar:
-    nav: "docs"
 ---
 
 [[모던 자바 인 액션] 03. 람다 표현식 - part2](https://ykmxxi.github.io/modern%20java%20in%20action/modernjava-chapter03-part2/)

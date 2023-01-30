@@ -2,11 +2,7 @@
 title: "[모던 자바 인 액션] 06. 스트림으로 데이터 수집"
 categories: [Modern Java in Action]
 tag: ["Java"]
-toc: true
-toc_sticky: true
 author_profile: false
-sidebar:
-    nav: "docs"
 ---
 
 <br>

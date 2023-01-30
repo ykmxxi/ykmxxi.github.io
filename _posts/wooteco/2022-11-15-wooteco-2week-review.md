@@ -2,11 +2,7 @@
 title: "[우테코-프리코스] 2주 차 회고"
 tag: [wooteco]
 categories: [wooteco]
-toc: true
-toc_sticky: true
 author_profile: false
-sidebar:
-    nav: "docs"
 ---
 
 [2주 차 PR 링크](https://github.com/woowacourse-precourse/java-baseball/pull/411)

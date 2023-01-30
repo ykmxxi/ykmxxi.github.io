@@ -2,11 +2,7 @@
 title: "[Spring] Transaction, @Transactional"
 categories: [Spring]
 tag: ["Spring", "SpringBoot"]
-toc: true
-toc_sticky: true
 author_profile: false
-sidebar:
-    nav: "docs"
 ---
 
 # 📌 Transaction?

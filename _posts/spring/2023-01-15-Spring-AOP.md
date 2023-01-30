@@ -2,11 +2,7 @@
 title: "[Spring] AOP (Aspect Oriented Programming)"
 categories: [Spring]
 tag: ["Spring", "SpringBoot"]
-toc: true
-toc_sticky: true
 author_profile: false
-sidebar:
-    nav: "docs"
 ---
 
 # 📌 AOP(관점 지향 프로그래밍)

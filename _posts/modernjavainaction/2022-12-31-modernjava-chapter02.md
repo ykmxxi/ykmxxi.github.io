@@ -2,11 +2,7 @@
 title: "[모던 자바 인 액션] 02. 동작 파라미터화 코드 전달하기"
 categories: [Modern Java in Action]
 tag: ["Java"]
-toc: true
-toc_sticky: true
 author_profile: false
-sidebar:
-    nav: "docs"
 ---
 
 - **동작 파라미터화(behavior parameterization)**: 어떻게 실행할 것인지 결정하지 않은 코드 블록

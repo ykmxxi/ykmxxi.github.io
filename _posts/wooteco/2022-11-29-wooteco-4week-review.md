@@ -2,11 +2,7 @@
 title: "[우테코-프리코스] 4주 차 회고"
 categories: [wooteco]
 tag: [wooteco]
-toc: true
-toc_sticky: true
 author_profile: false
-sidebar:
-    nav: "docs"
 ---
 
 # 1. `getter`를 사용하는 대신 객체에 메시지를 보내자

@@ -2,12 +2,8 @@
 title: "[알고리즘] 복잡성 (Complexity)"
 categories: [Algorithm]
 tag: ["Algorithm"]
-toc: true
-toc_sticky: true
 author_profile: false
 use_math: true
-sidebar:
-    nav: "docs"
 
 ---
 

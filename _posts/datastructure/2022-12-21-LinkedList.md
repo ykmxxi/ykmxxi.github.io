@@ -2,12 +2,7 @@
 title: "[자료구조] 자바(Java) 선형 자료구조: 연결 리스트(LinkedList)"
 categories: [DataStructure]
 tag: ["DataStructure"]
-toc: true
-toc_sticky: true
-author_profile: false
 use_math: true
-sidebar:
-    nav: "docs"
 ---
 
 # 📌 연결 리스트(Linked List)?
