@@ -3,6 +3,8 @@ title: "[자료구조] 자바(Java) 선형 자료구조: 연결 리스트(Linked
 categories: [DataStructure]
 tag: ["DataStructure"]
 use_math: true
+sidebar:
+    nav: "counts"
 ---
 
 # 📌 연결 리스트(Linked List)?

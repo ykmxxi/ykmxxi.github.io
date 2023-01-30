@@ -4,7 +4,8 @@ categories: [Algorithm]
 tag: ["Algorithm"]
 author_profile: false
 use_math: true
-
+sidebar:
+    nav: "counts"
 ---
 
 # 1. 시간 복잡도

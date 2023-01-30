@@ -3,6 +3,8 @@ title: "[모던 자바 인 액션] 05. 스트림 활용"
 categories: [Modern Java in Action]
 tag: ["Java"]
 author_profile: false
+sidebar:
+    nav: "counts"
 ---
 
 <br>

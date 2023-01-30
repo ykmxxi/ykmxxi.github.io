@@ -3,6 +3,8 @@ title: "[우테코-프리코스] 1주 차 회고"
 tag: [wooteco]
 categories: [wooteco]
 author_profile: false
+sidebar:
+    nav: "counts"
 ---
 
 [1주차 프리코스 PR 링크](https://github.com/woowacourse-precourse/java-onboarding/pull/593)

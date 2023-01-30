@@ -3,6 +3,8 @@ title: "[객체지향의 사실과 오해] 01 협력하는 객체들의 공동�
 categories: [book]
 tag: ["객체지향"]
 author_profile: false
+sidebar:
+    nav: "counts"
 ---
 
 # 📌 객체지향이란?

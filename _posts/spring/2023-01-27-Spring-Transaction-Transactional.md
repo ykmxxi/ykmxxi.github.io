@@ -3,6 +3,8 @@ title: "[Spring] Transaction, @Transactional"
 categories: [Spring]
 tag: ["Spring", "SpringBoot"]
 author_profile: false
+sidebar:
+    nav: "counts"
 ---
 
 # 📌 Transaction?

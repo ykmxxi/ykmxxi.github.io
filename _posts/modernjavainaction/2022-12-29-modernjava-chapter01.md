@@ -3,6 +3,8 @@ title: "[모던 자바 인 액션] 01. 자바 8, 9, 10, 11: 무슨 일이 일어
 categories: [Modern Java in Action]
 tag: ["Java"]
 author_profile: false
+sidebar:
+    nav: "counts"
 ---
 
 # 1.1 역사의 흐름은 무엇인가?
