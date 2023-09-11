@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 locale                   : "ko-KR"
 title                    : "YKM의 개발일지"
 title_separator          : "|"
-subtitle                 : "기록을 공유"
+subtitle                 : "Study hard, Be patient, Step by step"
 name                     : "YKM"
 description              : "YKM의 일지"
 url                      : "https://ykmxxi.github.io/"
@@ -71,7 +71,7 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification :
+google_site_verification : "wppfzWPo-bzUGRSHjPnyw9Zmn0vhtz6GrmaS4OpUAwM"
 bing_site_verification   :
 naver_site_verification  : "4d978e92a460602b195040372da9ca2ab41f0880"
 yandex_site_verification :
