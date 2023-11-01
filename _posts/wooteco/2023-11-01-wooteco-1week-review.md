@@ -21,6 +21,7 @@ sidebar:
 >
 > - [Notion: 왜 일급 컬렉션을 사용할까?](https://ykmxxi.notion.site/cda7ae6c4ce34f03b1145a55bbbf7967?pvs=4)
 > - [Notion: 왜 모든 원시값과 문자열을 포장할까?](https://ykmxxi.notion.site/343447ee124f4e2b9e06bda78e5cd0c8?pvs=4)
+> - [Notion: MVC 패턴](https://ykmxxi.notion.site/MVC-0496b91fae5e408a9cdce7b278f7a54b?pvs=4)
 > - [JDK 17 까지의 변천사 by TestCode](https://ykmxxi.github.io/%EC%9E%90%EB%B0%94/java-jdk17/)
 > - [Java Enum](https://ykmxxi.github.io/%EC%9E%90%EB%B0%94/java-enum/)
 > - [Java final & 불변 객체](https://ykmxxi.github.io/%EC%9E%90%EB%B0%94/java-final-immutable-object/)
